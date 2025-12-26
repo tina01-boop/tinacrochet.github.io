@@ -220,3 +220,12 @@ body::before {
   font-size: 14px;
   color: #6b3b47;
 }
+.price {
+  font-weight: bold;
+  color: #e1306c;
+  font-size: 16px;
+}
+.shipping {
+  font-size: 14px;
+  color: #6b3b47;
+}
