@@ -55,6 +55,9 @@
     <h3>Crochet cat gloves</h3>
     <p class="price">650da</p>
     <p class="shipping">Shipping: 200 DZD</p>
+     <button onclick="orderProduct('crochetcatgloves')">
+      Order
+    </button>
   </div>
   
 
@@ -66,6 +69,9 @@
     <h3>Crochet Bag</h3>
     <p class="price">1500da</p>
     <p class="shipping">Shipping: 200 DZD</p>
+     <button onclick="orderProduct('crochetbag')">
+      Order
+    </button>
   </div>
   
 
@@ -78,6 +84,9 @@
     <h3>Crochet scarf</h3>
     <p class="price">1000da</p>
     <p class="shipping">Shipping: 200 DZD</p>
+    <button onclick="orderProduct('crochetscarf')">
+      Order
+    </button>
   </div>
   
 
@@ -89,6 +98,9 @@
   <h3>crochet keychain</h3>
   <p class="price">200da</p>
   <p class="shipping">Shipping: 200 DZD</p>
+  <button onclick="orderProduct('crochetkeychain')">
+   Order
+  </button>
 </div>
 
 <h2>Payment & Shipping</h2>
@@ -98,11 +110,11 @@
 <p>💵 Payment: Cash on Delivery (pay when you receive)</p>
 <h2>Place Your Order</h2>
 
-<form action="https://formspree.io/f/XXXXXXX" method="POST">
+<form id="orderForm" action="https://formspree.io/f/abcdwxyz" method="POST">
 
   <p>
     Full Name:<br>
-    <input type="text" name="name" required>
+    <input type="text" id="productInput" name="product" required>
   </p>
 
   <p>
@@ -151,6 +163,14 @@
 <p>
   ✔ Cash on Delivery (pay when you receive your order)
 </p>
+<script>
+function orderProduct(productName) {
+  document.getElementById("productInput").value = productName;
+  document.getElementById("orderForm").scrollIntoView({
+    behavior: "smooth"
+  });
+}
+</script>
 
 
 </section>
