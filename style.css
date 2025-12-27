@@ -229,3 +229,26 @@ body::before {
   font-size: 14px;
   color: #6b3b47;
 }
+.order-btn {
+  background: linear-gradient(135deg, #ffb6c1, #ffc0cb);
+  border: none;
+  padding: 12px 25px;
+  border-radius: 25px;
+  font-size: 16px;
+  font-weight: bold;
+  color: #fff;
+  cursor: pointer;
+  box-shadow: 0 5px 10px rgba(255, 182, 193, 0.6);
+  transition: all 0.3s ease;
+}
+
+/* Hover effect */
+.order-btn:hover {
+  background: linear-gradient(135deg, #ff69b4, #ffb6c1);
+  transform: scale(1.05);
+}
+
+/* Click effect */
+.order-btn:active {
+  transform: scale(0.95);
+}
