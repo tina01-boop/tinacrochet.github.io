@@ -110,7 +110,7 @@
 <p>💵 Payment: Cash on Delivery (pay when you receive)</p>
 <h2>Place Your Order</h2>
 
-<form id="orderForm" action="https://formspree.io/f/mqekpovo" method="POST">
+<form id="orderForm" class="hidden" action="https://formspree.io/f/mqekpovo" method="POST">
 
   <p>
     Full Name:<br>
@@ -173,12 +173,19 @@
 </footer>
 <script>
 function orderProduct(productName) {
+  // Fill product name
   document.getElementById("productInput").value = productName;
+
+  // Show the form
+  document.getElementById("orderForm").classList.remove("hidden");
+
+  // Scroll to the form
   document.getElementById("orderForm").scrollIntoView({
     behavior: "smooth"
   });
 }
 </script>
+
 
 </body>
 </html>
